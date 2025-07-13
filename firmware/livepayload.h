@@ -353,6 +353,10 @@ const char LivePayload[] PROGMEM = R"=====(
                     validate: args => true, // Always valid
                     message: 'Comment line'
                 },
+                'REM': {
+                    validate: args => true, // Always valid
+                    message: 'Comment line'
+                },
                 'ServerConnect': {
                     validate: args => args.length > 0,
                     message: 'requires IP address/hostname or ipaddress:port'
@@ -639,6 +643,11 @@ const char LivePayload[] PROGMEM = R"=====(
         function isValidCommandLine(line) {
             // Skip comment lines (starting with ##)
             if (line.startsWith('##')) {
+                return { valid: true };
+            }
+
+            // Skip comment lines (starting with REM)
+            if (line.startsWith('REM')) {
                 return { valid: true };
             }
 
