@@ -19,7 +19,7 @@ const char AutoExecPlanning[] PROGMEM = R"=====(
             <li><a href='/livepayload'>Payload Editor</a></li>
             <li><a href='/uploadpayload'>Upload Payload</a></li>
             <li><a href='/listpayloads'>List Payloads</a></li>
-            <li><a href='/autoexecplanning'>AutoExec Planning</a></li>
+            <li><a href='/autoexecplanning' class="active">AutoExec Planning</a></li>
             <li><a href='/config'>Config</a></li>
         </ul>
     </nav>

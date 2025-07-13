@@ -17,7 +17,7 @@ const char UploadPayload[] PROGMEM = R"=====(
         <ul>
             <li><a href='/'>Home</a></li>
             <li><a href='/livepayload'>Payload Editor</a></li>
-            <li><a href='/uploadpayload'>Upload Payload</a></li>
+            <li><a href='/uploadpayload' class="active">Upload Payload</a></li>
             <li><a href='/listpayloads'>List Payloads</a></li>
             <li><a href='/autoexecplanning'>AutoExec Planning</a></li>
             <li><a href='/config'>Config</a></li>
