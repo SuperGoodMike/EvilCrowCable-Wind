@@ -20,7 +20,7 @@ const char Configuration[] PROGMEM = R"=====(
             <li><a href='/uploadpayload'>Upload Payload</a></li>
             <li><a href='/listpayloads'>List Payloads</a></li>
             <li><a href='/autoexecplanning'>AutoExec Planning</a></li>
-            <li><a href='/config'>Config</a></li>
+            <li><a href='/config' class="active">Config</a></li>
         </ul>
     </nav>
 

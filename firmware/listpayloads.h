@@ -18,7 +18,7 @@ const char StaticListPayloads[] PROGMEM = R"=====(
             <li><a href='/'>Home</a></li>
             <li><a href='/livepayload'>Payload Editor</a></li>
             <li><a href='/uploadpayload'>Upload Payload</a></li>
-            <li><a href='/listpayloads'>List Payloads</a></li>
+            <li><a href='/listpayloads' class="active">List Payloads</a></li>
             <li><a href='/autoexecplanning'>AutoExec Planning</a></li>
             <li><a href='/config'>Config</a></li>
         </ul>

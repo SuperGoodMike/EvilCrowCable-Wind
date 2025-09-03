@@ -911,7 +911,7 @@ void saveLayoutConfig(const String &layout) {
 void payloadExec() {
   cmd.trim();
   // Skip empty lines and comments
-  if (cmd.length() == 0 || cmd.startsWith("##")) {
+  if (cmd.length() == 0 || cmd.startsWith("##") || cmd.startsWith("REM")) {
       return;
   }
 

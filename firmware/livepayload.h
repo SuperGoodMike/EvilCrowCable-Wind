@@ -16,7 +16,7 @@ const char LivePayload[] PROGMEM = R"=====(
         <input type='checkbox' id='responsive-menu'><label for='responsive-menu'></label>
         <ul>
             <li><a href='/'>Home</a></li>
-            <li><a href='/livepayload'>Payload Editor</a></li>
+            <li><a href='/livepayload' class="active">Payload Editor</a></li>
             <li><a href='/uploadpayload'>Upload Payload</a></li>
             <li><a href='/listpayloads'>List Payloads</a></li>
             <li><a href='/autoexecplanning'>AutoExec Planning</a></li>
@@ -353,6 +353,10 @@ const char LivePayload[] PROGMEM = R"=====(
                     validate: args => true, // Always valid
                     message: 'Comment line'
                 },
+                'REM': {
+                    validate: args => true, // Always valid
+                    message: 'Comment line'
+                },
                 'ServerConnect': {
                     validate: args => args.length > 0,
                     message: 'requires IP address/hostname or ipaddress:port'
@@ -639,6 +643,11 @@ const char LivePayload[] PROGMEM = R"=====(
         function isValidCommandLine(line) {
             // Skip comment lines (starting with ##)
             if (line.startsWith('##')) {
+                return { valid: true };
+            }
+
+            // Skip comment lines (starting with REM)
+            if (line.startsWith('REM')) {
                 return { valid: true };
             }
 
